@@ -7,12 +7,12 @@ const StyledContainerForm = styled.div`
   justify-content: space-between;
   position: relative;
   width: 100%;
-
+  
   input,
   div {
     border: 0;
-    box-shadow: 1px 1px 5px rgb(241, 241, 241);
     border-radius: 3px;
+    color: ${props => props.theme.colors.text};
     height: 55px;
     outline: none;
     text-indent: 5px;
@@ -23,16 +23,18 @@ const StyledContainerForm = styled.div`
     padding-left: 70px;
     width: 100%;
     margin-right: 10px;
+    background: ${props => props.theme.colors.primary};
   }
 
   input::placeholder {
     font-size: 14px;
     font-weight: 400;
+    color: ${props => props.theme.colors.text};
   }
 
   i {
-    color: hsl(0, 0%, 52%);
-    font-size: 20px;
+    color: ${props => props.theme.colors.text};
+    font-size: 16px;
     position: absolute;
     z-index: 1;
   }
@@ -41,7 +43,7 @@ const StyledContainerForm = styled.div`
     display: flex;
     align-items: center;
     margin-top: 50px;
-    width: 480px;
+    width: 482px;
 
     @media (max-width: 500px) {
       width: 100%;
@@ -58,24 +60,26 @@ const StyledContainerForm = styled.div`
 
   div div {
     align-items: center;
-    background: #fff;
+    background: ${props => props.theme.colors.primary};
     cursor: pointer;
     display: flex;
     font-size: 14px;
     padding-left: 25px;
     position: relative;
     width: 200px;
+
   }
 
   form + div {
     margin-top: 50px;
+    
   }
 `;
 
 const StyledOptions = styled.ul`
-  background: #fff;
-  box-shadow: 1px 1px 5px rgb(241, 241, 241);
+  background: ${props => props.theme.colors.primary};
   border-radius: 3px;
+  color: ${props => props.theme.colors.text};
   height: auto;
   margin-top: 5px;
   padding: 25px 0 25px;
@@ -84,17 +88,16 @@ const StyledOptions = styled.ul`
     cursor: pointer;
     font-weight: 300;
     line-height: 1.5em;
-
     padding-left: 25px;
   }
 
   li:hover {
-    background: rgb(241, 241, 241);
+    background: ${props => props.theme.colors.background};
   }
 
-  li:last-child:hover {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+  li:last-child {
+    font-weight: 600;
+
   }
 `;
 

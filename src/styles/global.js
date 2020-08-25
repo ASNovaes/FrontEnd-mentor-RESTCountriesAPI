@@ -6,10 +6,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    user-select: none;
   }
 
   body {
-    background: hsl(0, 0%, 98%);    
+    background: ${props => props.theme.colors.background};  
     font-family: 'Nunito Sans', 'sans-serif', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: relative;
   }
@@ -23,5 +24,6 @@ const GlobalStyle = createGlobalStyle`
      list-style: none;
   }
 `;
+
 
 export default GlobalStyle;

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
-  background: #fff;
-  box-shadow: 0px 1px 5px rgb(241,241,241);
+  background: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.text};
   height: 80px;
   width: 100%;
 
@@ -16,7 +16,7 @@ const StyledHeader = styled.header`
   }
 
   div span:nth-child(1) {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 800;
   }
 

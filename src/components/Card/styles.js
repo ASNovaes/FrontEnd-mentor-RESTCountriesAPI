@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 const StyledCard = styled.div`
-  background: #fff;
-  box-shadow: 0px 0px 5px rgb(241,241,241);
+  background: ${props => props.theme.colors.primary};
   border-radius: 3px;
   cursor: pointer;
   height: 340px;
-  margin-top: 50px;
+  margin-bottom: 50px;
   width: 265px;
 
   :last-child {
@@ -30,6 +29,7 @@ const StyledCardContent = styled.div`
   padding: 25px;
 
   span {
+    color: ${props => props.theme.colors.text};
       font-size: 14px;
       line-height: 1.5em;
   }
